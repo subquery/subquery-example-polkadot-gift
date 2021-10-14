@@ -1,0 +1,19 @@
+specVersion: 0.0.1
+description: subql project for polkadot gift
+repository: ''
+schema: ./schema.graphql
+network:
+  endpoint: wss://polkadot.api.onfinality.io/public-ws
+dataSources:
+  - name: main
+    kind: substrate/Runtime
+    startBlock: 7249650
+    mapping:
+      handlers:
+        - handler: handleRemark
+          kind: substrate/EventHandler
+          filter:
+            module: balances
+            method: Transfer
+        - handler: handleCall
+          kind: substrate/CallHandler

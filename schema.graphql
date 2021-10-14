@@ -1,0 +1,12 @@
+type Gift @entity {
+  # Extrinsic hash
+  id: ID! 
+
+  address: String
+
+  creater: String
+
+  receiver: String
+
+  amount: BigInt
+}
