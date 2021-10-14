@@ -1,6 +1,10 @@
 type Gift @entity {
-  # Extrinsic hash
-  id: ID! 
+  # Gift Address
+  id: ID!
+
+  ceateExtrinsic: String
+
+  claimExtrinsic: String
 
   address: String
 
@@ -9,4 +13,11 @@ type Gift @entity {
   claimer: String
 
   amount: BigInt
+}
+
+type GiftExtrinsic @entity {
+  # Gift Ceate Extrinsic
+  id: ID!
+
+  giftID: String
 }
