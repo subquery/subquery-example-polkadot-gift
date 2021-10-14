@@ -8,7 +8,7 @@ type Gift @entity {
 
   address: String
 
-  creater: String
+  creator: String
 
   claimer: String
 

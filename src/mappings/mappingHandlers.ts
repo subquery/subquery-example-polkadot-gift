@@ -17,11 +17,11 @@ function findTransferEvent(events: EventRecord[]): EventRecord | undefined {
 async function handleGiftCreated(extrinsic: SubstrateExtrinsic) {
     const event = findTransferEvent(extrinsic.events);
     if (event) {
-        const [creater, owner, amount] = event.event.data;
+        const [creator, owner, amount] = event.event.data;
         const extrinsicHash = extrinsic.extrinsic.hash.toString();
 
         const gift = new Gift(owner.toString());
-        gift.creater = creater.toString();
+        gift.creator = creator.toString();
         gift.address = owner.toString();
         gift.amount = (amount as Balance).toBigInt();
         gift.ceateExtrinsic = extrinsicHash;
