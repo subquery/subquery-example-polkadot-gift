@@ -6,7 +6,7 @@ type Gift @entity {
 
   creater: String
 
-  receiver: String
+  claimer: String
 
   amount: BigInt
 }
