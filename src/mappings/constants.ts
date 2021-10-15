@@ -6,3 +6,15 @@ export enum GiftRemarkStatus {
   // `gift::remove`
   REMOVED = '0x4053cb611af36c422c9d6914ca3bde8862deea45aad4be9c180044a27511e66a',
 }
+
+export enum GiftStatus {
+  CREATED = 'CREATED',
+  CLAIMED = 'CLAIMED',
+  REMOVED = 'REMOVED',
+}
+
+export enum GiftAction {
+   CREATE = 'CREATE',
+   CLAIM = 'CLAIM',
+   REMOVE = 'REMOVE',
+}

@@ -2,10 +2,6 @@ type Gift @entity {
   # Gift Address
   id: ID!
 
-  ceateExtrinsic: String
-
-  claimExtrinsic: String
-
   address: String
 
   creator: String
@@ -13,11 +9,29 @@ type Gift @entity {
   claimer: String
 
   amount: BigInt
+
+  # `CREATED` | `CLAIMED` | `REMOVED`
+  status: String 
+
+  ceateExtrinsic: GiftExtrinsic
+
+  claimExtrinsic: GiftExtrinsic
+
+  removeExtrinsic: GiftExtrinsic
 }
 
 type GiftExtrinsic @entity {
-  # Gift Ceate Extrinsic
+  # Extrinsic Hash
   id: ID!
 
+  owner: String
+
   giftID: String
+
+  # `CREATE` | `CLAIM` | `REMOVE`
+  action: String 
+
+  timestamp: Date
+
+  blockNumber: BigInt
 }
