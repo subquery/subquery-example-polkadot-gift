@@ -1,6 +1,6 @@
 specVersion: 0.0.1
 description: subql project for polkadot gift
-repository: ''
+repository: ""
 schema: ./schema.graphql
 network:
   endpoint: wss://polkadot.api.onfinality.io/public-ws
