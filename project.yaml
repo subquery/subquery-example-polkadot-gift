@@ -1,14 +1,21 @@
-specVersion: 0.2.0
+specVersion: 1.0.0
 name: polkadot-gift-subql
-version: 0.1.0
+version: 1.0.0
+runner:
+  node:
+    name: "@subql/node"
+    version: "*"
+  query:
+    name: "@subql/query"
+    version: "*"
 description: subql project for polkadot gift
-repository: 'https://github.com/subquery/polkadot-gift-subql'
+repository: "https://github.com/subquery/polkadot-gift-subql"
 schema:
   file: ./schema.graphql
 network:
-  genesisHash: '0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3'
-  endpoint: wss://polkadot.api.onfinality.io/public-ws
-  dictionary: https://api.subquery.network/sq/subquery/polkadot-dictionary
+  chainId: "0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3"
+  endpoint: "wss://polkadot.api.onfinality.io/public-ws"
+  dictionary: "https://api.subquery.network/sq/subquery/polkadot-dictionary"
 dataSources:
   - kind: substrate/Runtime
     startBlock: 7247151
